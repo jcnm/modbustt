@@ -1,0 +1,111 @@
+[2025-07-13 17:57:40.575] [INFO ] === Démarrage du Système de Supervision ===
+[2025-07-13 17:57:40.576] [INFO ] Configuration MQTT: localhost:1883
+[2025-07-13 17:57:40.576] [INFO ] Ligne de production configurée: ACK1 (192.168.1.100:502)
+[2025-07-13 17:57:40.576] [INFO ] Ligne de production configurée: ACK2 (192.168.1.101:502)
+[2025-07-13 17:57:40.576] [INFO ] Ligne de production configurée: ACK3 (192.168.1.102:502)
+[2025-07-13 17:57:40.576] [INFO ] Configuration chargée avec succès depuis: config/config.yaml
+[2025-07-13 17:57:40.576] [INFO ] Configuration chargée: 3 lignes de production
+[2025-07-13 17:57:40.583] [INFO ] Thread de configuration démarré
+[2025-07-13 17:57:40.583] [INFO ] Thread de configuration en cours d'exécution
+[2025-07-13 17:57:40.583] [INFO ] MqttExporter: Connecting to localhost:1883
+[2025-07-13 17:57:40.731] [INFO ] MqttExporter: Connection successful.
+[2025-07-13 17:57:40.731] [INFO ] FileExporter: Log file opened at telemetry_data.jsonl
+[2025-07-13 17:57:40.731] [INFO ] Collector started for: ACK1
+[2025-07-13 17:57:40.731] [INFO ] Collecteur démarré pour: ACK1
+[2025-07-13 17:57:40.731] [INFO ] Collector thread running for: ACK1
+[2025-07-13 17:57:40.731] [INFO ] Collector started for: ACK2
+[2025-07-13 17:57:40.731] [INFO ] Collecteur démarré pour: ACK2
+[2025-07-13 17:57:40.731] [INFO ] Ligne désactivée, thread non créé: ACK3
+[2025-07-13 17:57:40.731] [INFO ] Collector thread running for: ACK2
+[2025-07-13 17:57:40.731] [INFO ] Système de supervision démarré avec succès
+[2025-07-13 17:57:40.731] [INFO ] Connexion MQTT établie pour la configuration: connect onSuccess called
+[2025-07-13 17:57:40.731] [INFO ] Abonnement au topic de commandes: supervision/commands
+[2025-07-13 17:57:41.737] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:57:41.737] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:57:47.740] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:57:47.746] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:57:53.747] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:57:53.752] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:57:58.752] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:57:58.757] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:58:03.758] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:58:03.761] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:58:08.763] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:58:08.767] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:58:14.774] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:58:14.775] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:58:20.782] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:58:20.782] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:58:26.788] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:58:26.790] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:58:31.793] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:58:31.794] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:58:36.799] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:58:36.799] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:58:41.803] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:58:41.805] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:58:47.809] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:58:47.813] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:58:53.816] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:58:53.823] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:58:59.825] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:58:59.834] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:59:04.829] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:59:04.839] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:59:09.834] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:59:09.841] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:59:14.836] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:59:14.844] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:59:20.843] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:59:20.851] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:59:26.848] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:59:26.861] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:59:32.858] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:59:32.865] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:59:37.864] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:59:37.870] [ERROR] Modbus connection failed for ACK2: No route to host
+[2025-07-13 17:59:42.870] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:59:42.873] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:59:47.871] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:59:47.878] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:59:52.882] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:59:53.882] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:59:58.888] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:59:59.892] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 18:00:04.898] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 18:00:05.898] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 18:00:10.903] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 18:00:10.905] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 18:00:15.909] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 18:00:15.910] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 18:00:20.913] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 18:00:20.916] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 18:00:25.917] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 18:00:26.922] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 18:00:31.926] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 18:00:32.930] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 18:00:37.935] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 18:00:38.941] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 18:00:43.942] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 18:00:43.944] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 18:00:48.944] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 18:00:48.949] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 18:00:53.950] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 18:00:53.950] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 18:00:58.956] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 18:00:59.953] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 18:01:04.967] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 18:01:05.964] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 18:01:10.972] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 18:01:11.971] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 18:01:13.870] [INFO ] Signal reçu (2), arrêt en cours...
+[2025-07-13 18:01:14.507] [INFO ] Arrêt de tous les threads...
+[2025-07-13 18:01:14.507] [INFO ] Stop requested for collector: ACK1
+[2025-07-13 18:01:14.507] [INFO ] Stop requested for collector: ACK2
+[2025-07-13 18:01:15.979] [INFO ] Collector thread finished for: ACK2
+[2025-07-13 18:01:16.972] [INFO ] Collector thread finished for: ACK1
+[2025-07-13 18:01:16.975] [INFO ] Arrêt demandé pour le thread de configuration
+[2025-07-13 18:01:17.478] [INFO ] Déconnexion MQTT effectuée pour la configuration
+[2025-07-13 18:01:17.478] [INFO ] Thread de configuration terminé
+[2025-07-13 18:01:17.478] [INFO ] Tous les threads arrêtés
+[2025-07-13 18:01:17.478] [INFO ] === Arrêt du Système de Supervision ===

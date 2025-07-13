@@ -137,7 +137,7 @@ void createCollectors(const std::vector<ProductionLineConfig>& lines, ConfigMana
     mqttExporter->connect();
 
     auto fileExporter = std::make_shared<modbustt::exporters::FileExporter>();
-    fileExporter->configure({{"filepath", "telemetry_data.jsonl"}});
+    fileExporter->configure({{"filepath", "telemetry_data.json"}});
     fileExporter->connect();
 
     for (const auto& line : lines) {

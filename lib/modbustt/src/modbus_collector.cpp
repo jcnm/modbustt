@@ -172,7 +172,13 @@ bool ModbusCollector::readRegisters() {
     }
 
     if (success && !values.empty()) {
+        // Créer un objet TelemetryData et l'exporter
         TelemetryData data(config_.id, values);
+        // TODO: Ajouter alternative pour ne pas bloquer le thread ET ne pas perdre de données si aucune exporter est configurée ou est déconnectée
+        // La lib sert à ingérer des données, pas à les stocker dans le cadre du développement du mbserve, 
+        // il faudra un exporter en mémoire (un exporter qui stocke les données dans une structure modbus server, 
+        // modbustt::exporters::InMemoryExporter, peut être cette implémentation là)
+        // C'est à mbserve de gérer les problèmatiques de persistences de data, configuration InMemoryExporter pour representer un buffer de données Modbus
         exportData(data);
     }
 

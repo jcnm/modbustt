@@ -30,6 +30,7 @@ set(SOURCES
     src/Logger.cpp
     src/ConfigManager.cpp    
     src/ConfigThread.cpp
+    
 )
 
 # Importer la bibliothèque paho-mqtt C statique

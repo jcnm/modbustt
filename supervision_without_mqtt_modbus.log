@@ -1,0 +1,228 @@
+[2025-07-13 17:10:16.086] [INFO ] === Démarrage du Système de Supervision ===
+[2025-07-13 17:10:16.087] [INFO ] Configuration MQTT: localhost:1883
+[2025-07-13 17:10:16.087] [INFO ] Ligne de production configurée: ACK1 (192.168.1.100:502)
+[2025-07-13 17:10:16.087] [INFO ] Ligne de production configurée: ACK2 (192.168.1.101:502)
+[2025-07-13 17:10:16.087] [INFO ] Ligne de production configurée: ACK3 (192.168.1.102:502)
+[2025-07-13 17:10:16.087] [INFO ] Configuration chargée avec succès depuis: config/config.yaml
+[2025-07-13 17:10:16.087] [INFO ] Configuration chargée: 3 lignes de production
+[2025-07-13 17:10:16.093] [INFO ] Thread de configuration démarré
+[2025-07-13 17:10:16.093] [INFO ] Thread de configuration en cours d'exécution
+[2025-07-13 17:10:16.093] [INFO ] MqttExporter: Connecting to localhost:1883
+[2025-07-13 17:10:16.197] [ERROR] MqttExporter: Connection error: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:10:16.197] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:10:16.197] [INFO ] FileExporter: Log file opened at telemetry_data.jsonl
+[2025-07-13 17:10:16.198] [INFO ] Collector started for: ACK1
+[2025-07-13 17:10:16.198] [INFO ] Collecteur démarré pour: ACK1
+[2025-07-13 17:10:16.198] [INFO ] Collector thread running for: ACK1
+[2025-07-13 17:10:16.198] [INFO ] Collector thread running for: ACK2
+[2025-07-13 17:10:16.198] [INFO ] Collector started for: ACK2
+[2025-07-13 17:10:16.198] [INFO ] Collecteur démarré pour: ACK2
+[2025-07-13 17:10:16.198] [INFO ] Ligne désactivée, thread non créé: ACK3
+[2025-07-13 17:10:16.198] [INFO ] Système de supervision démarré avec succès
+[2025-07-13 17:10:17.203] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:10:17.203] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:10:21.260] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:10:23.210] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:10:23.212] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:10:26.337] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:10:29.221] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:10:29.221] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:10:31.403] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:10:34.226] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:10:34.227] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:10:36.495] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:10:39.229] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:10:39.231] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:10:41.556] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:10:44.235] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:10:44.236] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:10:46.630] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:10:50.241] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:10:50.241] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:10:51.708] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:10:56.246] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:10:56.249] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:10:56.764] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:01.851] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:02.255] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:11:02.257] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:11:06.934] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:07.260] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:11:07.263] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:11:12.005] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:12.266] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:11:12.267] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:11:17.070] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:17.270] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:11:17.271] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:11:22.134] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:23.275] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:11:23.278] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:11:27.198] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:29.284] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:11:29.286] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:11:32.268] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:35.291] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:11:35.298] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:11:36.482] [INFO ] Changement de configuration détecté, rechargement...
+[2025-07-13 17:11:36.482] [INFO ] Configuration MQTT: localhost:1883
+[2025-07-13 17:11:36.482] [INFO ] Ligne de production configurée: ACK1 (192.168.1.100:502)
+[2025-07-13 17:11:36.482] [INFO ] Ligne de production configurée: ACK2 (192.168.1.101:502)
+[2025-07-13 17:11:36.483] [INFO ] Ligne de production configurée: ACK3 (192.168.1.102:502)
+[2025-07-13 17:11:36.483] [INFO ] Configuration chargée avec succès depuis: config/config.yaml
+[2025-07-13 17:11:36.483] [INFO ] Configuration rechargée avec succès
+[2025-07-13 17:11:37.326] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:40.298] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:11:40.300] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:11:42.400] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:45.304] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:11:45.306] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:11:47.471] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:50.307] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:11:50.309] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:11:52.570] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:11:56.312] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:11:56.315] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:11:57.655] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:02.318] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:12:02.325] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:12:02.714] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:07.780] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:08.324] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:12:08.331] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:12:12.861] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:13.327] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:12:13.337] [ERROR] Modbus connection failed for ACK1: No route to host
+[2025-07-13 17:12:17.940] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:18.333] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:12:18.339] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:12:23.012] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:23.338] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:12:23.345] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:12:28.087] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:28.350] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:12:29.349] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:12:33.163] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:34.356] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:12:35.360] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:12:38.223] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:40.361] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:12:41.370] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:12:43.275] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:46.363] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:12:46.375] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:12:48.326] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:51.366] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:12:51.378] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:12:53.394] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:12:56.371] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:12:56.384] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:12:58.467] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:01.372] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:13:02.391] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:13:03.567] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:07.383] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:13:08.399] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:13:08.628] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:13.394] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:13:13.711] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:14.406] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:13:18.796] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:19.405] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:13:19.408] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:13:23.858] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:24.407] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:13:24.413] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:13:28.925] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:29.410] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:13:29.416] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:13:34.004] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:34.415] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:13:35.425] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:13:39.079] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:40.424] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:13:41.433] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:13:44.150] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:46.427] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:13:47.438] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:13:49.227] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:52.437] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:13:52.446] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:13:54.314] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:13:57.441] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:13:57.450] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:13:59.390] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:02.447] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:14:02.455] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:14:04.474] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:07.453] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:14:08.463] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:14:09.533] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:13.455] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:14:14.473] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:14:14.596] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:19.464] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:14:19.658] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:20.479] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:14:24.760] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:25.474] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:14:25.485] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:14:29.830] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:30.480] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:14:30.488] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:14:34.921] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:35.485] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:14:35.494] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:14:40.001] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:40.486] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:14:41.501] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:14:45.067] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:46.494] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:14:47.504] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:14:50.111] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:52.501] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:14:53.508] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:14:55.179] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:14:58.504] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:14:59.517] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:15:00.238] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:03.509] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:15:04.523] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:15:05.300] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:08.511] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:15:09.528] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:15:10.353] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:13.513] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:15:14.528] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:15:15.406] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:19.525] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:15:20.496] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:20.533] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:15:25.535] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:15:25.571] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:26.538] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:15:30.666] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:31.539] [ERROR] Modbus connection failed for ACK1: Operation timed out
+[2025-07-13 17:15:32.544] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:15:35.744] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:36.541] [ERROR] Modbus connection failed for ACK1: No route to host
+[2025-07-13 17:15:38.552] [ERROR] Modbus connection failed for ACK2: Operation timed out
+[2025-07-13 17:15:40.812] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:41.545] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:15:43.557] [ERROR] Modbus connection failed for ACK2: No route to host
+[2025-07-13 17:15:45.903] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:46.549] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:15:48.562] [ERROR] Modbus connection failed for ACK2: Host is down
+[2025-07-13 17:15:50.981] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:51.554] [ERROR] Modbus connection failed for ACK1: Host is down
+[2025-07-13 17:15:51.972] [INFO ] Signal reçu (2), arrêt en cours...
+[2025-07-13 17:15:52.399] [INFO ] Arrêt de tous les threads...
+[2025-07-13 17:15:52.400] [INFO ] Stop requested for collector: ACK1
+[2025-07-13 17:15:52.400] [INFO ] Stop requested for collector: ACK2
+[2025-07-13 17:15:53.567] [INFO ] Collector thread finished for: ACK2
+[2025-07-13 17:15:56.062] [ERROR] Erreur de connexion MQTT pour la configuration: MQTT error [-1]: TCP connect completion failure
+[2025-07-13 17:15:56.555] [INFO ] Collector thread finished for: ACK1
+[2025-07-13 17:15:56.556] [INFO ] Arrêt demandé pour le thread de configuration
+[2025-07-13 17:16:01.067] [INFO ] Thread de configuration terminé
+[2025-07-13 17:16:01.067] [INFO ] Tous les threads arrêtés
+[2025-07-13 17:16:01.067] [INFO ] === Arrêt du Système de Supervision ===

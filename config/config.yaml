@@ -5,7 +5,7 @@
 mqtt:
   broker: "localhost"
   port: 1883
-  client_id: "supervision_system_001"
+  client_id: "sprv_001"
   username: ""
   password: ""
   publish_topic: "supervision/data"
