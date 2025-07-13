@@ -1,0 +1,97 @@
+# Configuration du système de supervision
+# Fichier de configuration YAML pour le système de supervision d'atelier
+
+# Configuration MQTT
+mqtt:
+  broker: "localhost"
+  port: 1883
+  client_id: "supervision_system_001"
+  username: ""
+  password: ""
+  publish_topic: "supervision/data"
+  command_topic: "supervision/commands"
+  publish_frequency_ms: 800
+  qos: 1
+
+# Configuration des lignes de production
+production_lines:
+  - id: "ACK1"
+    ip: "192.168.1.100"
+    port: 502
+    unit_id: 1
+    acquisition_frequency_ms: 200
+    enabled: true
+    registers:
+      - address: 40001
+        name: "temperature"
+        type: "holding"
+        scale: 0.1
+        offset: 0.0
+      - address: 40002
+        name: "pressure"
+        type: "holding"
+        scale: 0.01
+        offset: 0.0
+      - address: 40003
+        name: "motor_speed"
+        type: "holding"
+        scale: 1.0
+        offset: 0.0
+      - address: 10001
+        name: "pump_status"
+        type: "coil"
+        scale: 1.0
+        offset: 0.0
+
+  - id: "ACK2"
+    ip: "192.168.1.101"
+    port: 502
+    unit_id: 1
+    acquisition_frequency_ms: 250
+    enabled: true
+    registers:
+      - address: 40001
+        name: "temperature"
+        type: "holding"
+        scale: 0.1
+        offset: 0.0
+      - address: 40002
+        name: "pressure"
+        type: "holding"
+        scale: 0.01
+        offset: 0.0
+      - address: 40004
+        name: "flow_rate"
+        type: "holding"
+        scale: 0.1
+        offset: 0.0
+      - address: 10002
+        name: "valve_status"
+        type: "coil"
+        scale: 1.0
+        offset: 0.0
+
+  - id: "ACK3"
+    ip: "192.168.1.102"
+    port: 502
+    unit_id: 1
+    acquisition_frequency_ms: 300
+    enabled: false  # Ligne désactivée par défaut
+    registers:
+      - address: 40001
+        name: "temperature"
+        type: "holding"
+        scale: 0.1
+        offset: 0.0
+      - address: 40005
+        name: "vibration"
+        type: "holding"
+        scale: 0.001
+        offset: 0.0
+
+# Configuration des logs
+logging:
+  level: "INFO"  # DEBUG, INFO, WARN, ERROR
+  file: "supervision.log"
+  console: true
+
