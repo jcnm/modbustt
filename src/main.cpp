@@ -13,9 +13,9 @@
 #include "ConfigThread.h"
 
 // --- Utilisation de la nouvelle bibliothèque modbustt ---
-#include "modbustt/modbus_collector.h"
-#include "modbustt/exporters/mqtt_exporter.h" // On supposera que cet exporter existe
-#include "modbustt/exporters/file_exporter.h"
+#include "modbus_collector.h"
+#include "exporters/mqtt_exporter.h" // On supposera que cet exporter existe
+#include "exporters/file_exporter.h"
 
 using json = nlohmann::json;
 
@@ -131,8 +131,8 @@ void createCollectors(const std::vector<ProductionLineConfig>& lines, ConfigMana
     const auto& mqttConfig = configManager.getMqttConfig();
     mqttConfigJson["broker_address"] = mqttConfig.broker;
     mqttConfigJson["port"] = mqttConfig.port;
-    mqttConfigJson["client_id"] = mqttConfig.client_id + "_modbustt";
-    mqttConfigJson["topic"] = mqttConfig.publish_topic;
+    mqttConfigJson["client_id"] = mqttConfig.clientId + "_modbustt";
+    mqttConfigJson["topic"] = mqttConfig.publishTopic;
     mqttExporter->configure(mqttConfigJson);
     mqttExporter->connect();
 
@@ -148,11 +148,11 @@ void createCollectors(const std::vector<ProductionLineConfig>& lines, ConfigMana
             collectorConfig.protocol = "tcp"; // Supposons TCP pour l'instant
             collectorConfig.ip_address = line.ip;
             collectorConfig.port = line.port;
-            collectorConfig.unit_id = line.unit_id;
-            collectorConfig.acquisition_frequency_ms = line.acquisition_frequency_ms;
+            collectorConfig.unit_id = line.unitId;
+            collectorConfig.acquisition_frequency_ms = line.acquisitionFrequencyMs;
             // ... mapper les registres ...
 
-            auto collector = std::make_shared<modbustt::ModbusCollector>(collectorConfig);
+            auto collector = std::make_shared<modbustt::ModbusCollector>(collectorConfig); 
             collector->addExporter(mqttExporter); // Publie sur MQTT
             collector->addExporter(fileExporter); // Et écrit dans un fichier
             if (collector->start()) {
