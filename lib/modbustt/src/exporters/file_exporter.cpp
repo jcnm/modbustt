@@ -1,6 +1,10 @@
 #include "exporters/file_exporter.h"
 #include "Logger.h"
 #include <iomanip>
+#include <fstream>
+#include <sstream>
+
+using namespace std;
 
 namespace modbustt {
 namespace exporters {

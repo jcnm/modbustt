@@ -56,7 +56,8 @@ private:
 
     modbus_t* modbusContext_ = nullptr;
     bool connected_ = false;
-
+    bool success_ = true;
+    
     std::queue<CollectorControlMessage> controlQueue_;
     std::mutex controlMutex_;
     std::condition_variable controlCondition_;

@@ -20,6 +20,10 @@ private:
     // Would use OS-specific sockets or a library like Boost.Asio
     int sock_ = -1;
     bool connected_ = false;
+    std::string host_ = "localhost";
+    int port_ = 5170; // Default port for TCP exporter
+
+
 };
 
 } // namespace exporters

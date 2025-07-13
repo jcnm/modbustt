@@ -23,6 +23,13 @@ private:
     std::unique_ptr<zmq::context_t> context_;
     std::unique_ptr<zmq::socket_t> socket_;
     bool connected_ = false;
+
+    std::string endpoint_;
+    std::string topic_;
+    int qos_ = 1; // Quality of Service level, if applicable
+    std::mutex connection_mutex_;
+    void sendMessage(const nlohmann::json& message);
+    void handleError(const std::string& errorMessage); 
 };
 
 } // namespace exporters

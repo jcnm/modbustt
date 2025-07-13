@@ -49,6 +49,8 @@ private:
     void exportData(const TelemetryData& data);
 
     CollectorConfig config_;
+    std::mutex mutex_;
+
     std::unique_ptr<std::thread> thread_;
     std::atomic<bool> running_{false};
     std::atomic<bool> paused_{false};

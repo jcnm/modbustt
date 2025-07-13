@@ -16,7 +16,7 @@ bool SyslogExporter::connect() {
     // LOG_CONS: write to console if error sending to syslogd
     // LOG_USER: user-level messages
     openlog(ident_.c_str(), LOG_PID | LOG_CONS, LOG_USER);
-    LOG_INFO("SyslogExporter: Connected to syslog daemon with ident '" + ident_ + "'");
+    // LOG_INFO("SyslogExporter: Connected to syslog daemon with ident '" + ident_ + "'");
     connected_ = true;
     return true;
 }

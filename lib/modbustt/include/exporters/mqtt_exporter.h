@@ -30,6 +30,8 @@ private:
     std::string client_id_;
     std::string topic_;
     int qos_ = 1;
+    std::string username_;
+    std::string password_;
     mqtt::connect_options conn_opts_;
     std::atomic<bool> connected_{false};
     std::mutex connection_mutex_;

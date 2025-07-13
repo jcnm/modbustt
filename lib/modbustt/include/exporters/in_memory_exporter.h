@@ -23,6 +23,7 @@ private:
     std::deque<TelemetryData> data_queue_;
     mutable std::mutex mutex_;
     size_t max_size_ = 1000;
+
 };
 
 } // namespace exporters

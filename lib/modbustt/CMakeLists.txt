@@ -38,13 +38,19 @@ target_include_directories(modbustt PUBLIC include ${MODBUS_INCLUDE_DIRS})
 target_link_libraries(modbustt PUBLIC
     ${MODBUS_LIBRARIES}
     nlohmann_json::nlohmann_json
-    # Lier les bibliothèques paho-mqtt définies comme IMPORTED dans le scope parent
-    paho-mqttpp3
+)
+
+# Add paho-mqtt include dirs directly to the modbustt target
+get_target_property(PAHO_INCLUDE_DIRS paho-mqttpp3 INTERFACE_INCLUDE_DIRECTORIES)
+if(PAHO_INCLUDE_DIRS)
+    target_include_directories(modbustt PUBLIC ${PAHO_INCLUDE_DIRS})
+endif()
+
+# Link paho-mqtt and its dependencies
+target_link_libraries(modbustt PUBLIC
+    paho-mqttpp3 # This should now work because include dirs are handled
     paho-mqtt3as
-    # Lier OpenSSL et Threads requis par paho
-    OpenSSL::SSL
-    OpenSSL::Crypto
-    Threads::Threads
+    OpenSSL::SSL OpenSSL::Crypto Threads::Threads # Their dependencies
 )
 
 if(ZMQ_FOUND)

@@ -21,6 +21,7 @@ private:
     std::ofstream file_stream_;
     std::string filepath_;
     mutable std::mutex mutex_;
+    
 };
 
 } // namespace exporters

@@ -87,7 +87,7 @@ void ModbusCollector::threadFunction() {
 
         // Attente contrôlée par la condition variable pour un arrêt réactif
         std::unique_lock<std::mutex> lock(controlMutex_);
-        controlCondition_.wait_for(lock, acquisitionPeriod_, [this] { return stopRequested_; });
+        controlCondition_.wait_for(lock, acquisitionPeriod_, [this] { return stopRequested_.load(); });
     }
     disconnectFromModbus();
     running_ = false;

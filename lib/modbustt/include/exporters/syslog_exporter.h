@@ -15,6 +15,7 @@ public:
     bool is_connected() const override;
 private:
     bool connected_ = false;
+    std::string ident_ = "modbustt"; // Default identifier for syslog
 };
 
 } // namespace exporters
