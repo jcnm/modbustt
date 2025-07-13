@@ -3,6 +3,7 @@
 #include <memory>
 #include <vector>
 #include <thread>
+#include <map>
 #include <chrono>
 #include <nlohmann/json.hpp>
 
@@ -18,7 +19,7 @@ using json = nlohmann::json;
 static bool g_running = true;
 static std::unique_ptr<PublisherThread> g_publisherThread;
 static std::unique_ptr<ConfigThread> g_configThread;
-static std::vector<std::shared_ptr<AcquisitionThread>> g_acquisitionThreads;
+static std::map<std::string, std::shared_ptr<AcquisitionThread>> g_acquisitionThreads;
 
 // Gestionnaire de signaux pour arrêt propre
 void signalHandler(int signal) {
@@ -35,13 +36,10 @@ void handleReconfigurationCommand(const std::string& command, const std::string&
         if (commandType == "pause_line") {
             if (cmd.contains("line_ids")) {
                 for (const auto& lineId : cmd["line_ids"]) {
-                    std::string id = lineId;
-                    for (auto& thread : g_acquisitionThreads) {
-                        if (thread->getLineId() == id) {
-                            thread->pause();
-                            LOG_INFO("Ligne mise en pause: " + id);
-                            break;
-                        }
+                    auto it = g_acquisitionThreads.find(lineId.get<std::string>());
+                    if (it != g_acquisitionThreads.end()) {
+                        it->second->pause();
+                        LOG_INFO("Ligne mise en pause: " + it->first);
                     }
                 }
             }
@@ -49,44 +47,35 @@ void handleReconfigurationCommand(const std::string& command, const std::string&
         else if (commandType == "resume_line") {
             if (cmd.contains("line_ids")) {
                 for (const auto& lineId : cmd["line_ids"]) {
-                    std::string id = lineId;
-                    for (auto& thread : g_acquisitionThreads) {
-                        if (thread->getLineId() == id) {
-                            thread->resume();
-                            LOG_INFO("Ligne reprise: " + id);
-                            break;
-                        }
+                    auto it = g_acquisitionThreads.find(lineId.get<std::string>());
+                    if (it != g_acquisitionThreads.end()) {
+                        it->second->resume();
+                        LOG_INFO("Ligne reprise: " + it->first);
                     }
                 }
             }
         }
         else if (commandType == "set_cadence") {
             if (cmd.contains("line_id") && cmd.contains("cadence_ms")) {
-                std::string lineId = cmd["line_id"];
+                std::string lineId = cmd["line_id"].get<std::string>();
                 int cadenceMs = cmd["cadence_ms"];
-                
-                for (auto& thread : g_acquisitionThreads) {
-                    if (thread->getLineId() == lineId) {
-                        thread->setFrequency(cadenceMs);
-                        LOG_INFO("Cadence mise à jour pour " + lineId + ": " + std::to_string(cadenceMs) + "ms");
-                        break;
-                    }
+                auto it = g_acquisitionThreads.find(lineId);
+                if (it != g_acquisitionThreads.end()) {
+                    it->second->setFrequency(cadenceMs);
+                    LOG_INFO("Cadence mise à jour pour " + lineId + ": " + std::to_string(cadenceMs) + "ms");
                 }
             }
         }
         else if (commandType == "stop_line") {
             if (cmd.contains("line_ids")) {
                 for (const auto& lineId : cmd["line_ids"]) {
-                    std::string id = lineId;
-                    for (auto it = g_acquisitionThreads.begin(); it != g_acquisitionThreads.end(); ++it) {
-                        if ((*it)->getLineId() == id) {
-                            (*it)->stop();
-                            (*it)->join();
-                            g_publisherThread->removeAcquisitionThread(id);
-                            g_acquisitionThreads.erase(it);
-                            LOG_INFO("Ligne arrêtée: " + id);
-                            break;
-                        }
+                    auto it = g_acquisitionThreads.find(lineId.get<std::string>());
+                    if (it != g_acquisitionThreads.end()) {
+                        it->second->stop();
+                        it->second->join();
+                        g_publisherThread->removeAcquisitionThread(it->first);
+                        g_acquisitionThreads.erase(it);
+                        LOG_INFO("Ligne arrêtée: " + it->first);
                     }
                 }
             }
@@ -106,7 +95,7 @@ void createAcquisitionThreads(const std::vector<ProductionLineConfig>& lines) {
         if (line.enabled) {
             auto acquisitionThread = std::make_shared<AcquisitionThread>(line);
             if (acquisitionThread->start()) {
-                g_acquisitionThreads.push_back(acquisitionThread);
+                g_acquisitionThreads[line.id] = acquisitionThread;
                 g_publisherThread->addAcquisitionThread(acquisitionThread);
                 LOG_INFO("Thread d'acquisition créé et démarré pour: " + line.id);
             } else {
@@ -123,13 +112,13 @@ void stopAllThreads() {
     LOG_INFO("Arrêt de tous les threads...");
     
     // Arrêter les threads d'acquisition
-    for (auto& thread : g_acquisitionThreads) {
-        thread->stop();
+    for (auto& pair : g_acquisitionThreads) {
+        pair.second->stop();
     }
     
     // Attendre la fin des threads d'acquisition
-    for (auto& thread : g_acquisitionThreads) {
-        thread->join();
+    for (auto& pair : g_acquisitionThreads) {
+        pair.second->join();
     }
     g_acquisitionThreads.clear();
     
@@ -235,4 +224,3 @@ int main(int argc, char* argv[]) {
     LOG_INFO("=== Arrêt du Système de Supervision ===");
     return 0;
 }
-

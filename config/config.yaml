@@ -1,6 +1,6 @@
 # Configuration du système de supervision
 # Fichier de configuration YAML pour le système de supervision d'atelier
-
+# Simple et extensible mais bête pour l'instant
 # Configuration MQTT
 mqtt:
   broker: "localhost"
