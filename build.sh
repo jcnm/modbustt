@@ -36,32 +36,35 @@ export PKG_CONFIG_PATH="$HOME/.local/lib/pkgconfig:$PKG_CONFIG_PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
 
 # Installation de paho-mqtt-c et paho-mqtt-cpp
-if ! pkg-config --exists paho-mqttpp3; then
+if [ ! pkg-config --exists paho-mqttpp3 ]; then
     echo "Installation de paho-mqtt-c et paho-mqtt-cpp via source..."
 
     TEMP_DIR=$(mktemp -d)
     cd "$TEMP_DIR"
     pwd
     echo "Répertoire temporaire créé: $TEMP_DIR"
-    # paho.mqtt.c
-    git clone https://github.com/eclipse/paho.mqtt.c.git
-    cd paho.mqtt.c
-    sudo cmake -Bbuild -H. -DPAHO_BUILD_STATIC=ON \
-    -DPAHO_ENABLE_TESTING=OFF -DPAHO_BUILD_DOCUMENTATION=OFF -DPAHO_WITH_SSL=TRUE
-    sudo cmake --build build --target install
-    cd ..
-    echo "paho.mqtt.c installé"
-
-    # paho.mqtt.cpp
-    echo "Installation de paho.mqtt.cpp..."
-    echo "-----------------------------"
-    git clone https://github.com/eclipse/paho.mqtt.cpp.git
-    cd paho.mqtt.cpp
-    sudo cmake -Bbuild -H. -DPAHO_BUILD_STATIC=ON\
-    -DPAHO_BUILD_DOCUMENTATION=OFF -DPAHO_WITH_SSL=TRUE
-    sudo cmake --build build --target install
-    echo "paho.mqtt.cpp installé"
-
+    if [ ! -f "/usr/local/lib/libpaho-mqtt3as.a" ]; then
+        # paho.mqtt.c
+        git clone https://github.com/eclipse/paho.mqtt.c.git
+        cd paho.mqtt.c
+        sudo cmake -Bbuild -H. -DPAHO_BUILD_STATIC=ON \
+        -DPAHO_ENABLE_TESTING=OFF -DPAHO_BUILD_DOCUMENTATION=OFF -DPAHO_WITH_SSL=TRUE
+        sudo cmake --build build --target install
+        cd ..
+        echo "paho.mqtt.c installé"
+    fi
+    
+    if [ ! -f "/usr/local/lib/libpaho-mqttpp3.a" ]; then
+        # paho.mqtt.cpp
+        echo "Installation de paho.mqtt.cpp..."
+        echo "-----------------------------"
+        git clone https://github.com/eclipse/paho.mqtt.cpp.git
+        cd paho.mqtt.cpp
+        sudo cmake -Bbuild -H. -DPAHO_BUILD_STATIC=ON\
+        -DPAHO_BUILD_DOCUMENTATION=OFF -DPAHO_WITH_SSL=TRUE
+        sudo cmake --build build --target install
+        echo "paho.mqtt.cpp installé"
+    fi
     cd /
     sudo rm -rf "$TEMP_DIR"
 else

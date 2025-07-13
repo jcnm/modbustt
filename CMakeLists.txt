@@ -25,13 +25,10 @@ include_directories(${MODBUS_INCLUDE_DIRS})
 # En-têtes du projet
 include_directories(include)
 
-# Fichiers source du noyau supervision (ajoute ici tous tes fichiers .cpp sauf main/test)
+# Fichiers source du noyau supervision
 set(SOURCES
-    src/ModbusData.cpp
     src/Logger.cpp
     src/ConfigManager.cpp    
-    src/AcquisitionThread.cpp
-    src/PublisherThread.cpp
     src/ConfigThread.cpp
 )
 
@@ -49,13 +46,14 @@ set_target_properties(paho-mqttpp3 PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES "/usr/local/include"
 )
 
-# Bibliothèque principale (core) de supervision
+# Bibliothèque "core" de l'application (logique non-modbus)
 add_library(supervision_core ${SOURCES})
 
-target_compile_options(supervision_core PRIVATE ${MODBUS_CFLAGS_OTHER})
+# Ajout de la sous-bibliothèque modbustt
+add_subdirectory(lib/modbustt)
 
+# Liens de la lib core
 target_link_libraries(supervision_core
-    ${MODBUS_LIBRARIES}
     yaml-cpp 
     nlohmann_json::nlohmann_json
     Threads::Threads
@@ -70,8 +68,12 @@ target_link_libraries(supervision_core
 add_executable(test_core tests/simple_test.cpp)
 target_link_libraries(test_core supervision_core)
 
+# Exécutable principal
 add_executable(supervisor src/main.cpp)
-target_link_libraries(supervisor supervision_core)
+target_link_libraries(supervisor 
+    supervision_core
+    modbustt # On lie notre nouvelle bibliothèque !
+)
 
 # Installation
 install(TARGETS supervisor
